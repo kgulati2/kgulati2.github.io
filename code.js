@@ -14,9 +14,12 @@ function main() {
         xScale.domain(data.map(function(d){ return d.year;}));
         yScale.domain([0, d3.max(data, function(d) {return d.value;})]);
 
-        g.append("g").attr("transform", "translate(0"+height+"0)")
+        g.append("g")
+            .attr("transform", "translate(0,"+height+")")
             .call(d3.axisBottom(xScale))
-        g.append("g").call(d3.axisLeft(yScale).tickFormat( function(d) {
+
+        g.append("g")
+            .call(d3.axisLeft(yScale).tickFormat( function(d) {
             return "$" + d;
         }).ticks(10));
 
