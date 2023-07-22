@@ -16,7 +16,7 @@ function main() {
 
         g.append("g").attr("transform", "translate(0"+height+"0)")
             .call(d3.axisBottom(xScale))
-        g.append("g").cal(d3.axisLeft(yScale).tickFormat( function(d) {
+        g.append("g").call(d3.axisLeft(yScale).tickFormat( function(d) {
             return "$" + d;
         }).ticks(10));
 
@@ -28,6 +28,6 @@ function main() {
         .attr("y", function(d) {return yScale(d.value);})
         .attr("width", xScale.bandwidth())
         .attr("height", function(d) {return height - yScale(d.value);});
-        
+
     });
 }
