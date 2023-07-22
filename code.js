@@ -4,6 +4,15 @@ function main() {
     width = svg.attr("width") - margin
     height = svg.attr("height") - margin;
 
+    // Title
+
+    svg.append("text")
+        .attr("transform", "translate(100,0)")
+        .attr("x", 70)
+        .attr("y", 50)
+        .attr("font-size", "24px")
+        .text("Tesla Stock Prices");
+
     var xScale = d3.scaleBand().range([0, width]).padding(0.4),
         yScale = d3.scaleLinear().range([height, 0]);
     

@@ -1,3 +1,11 @@
 .bar{
-    fill: navy;
+    fill: red;
+}
+.line {
+    fill: none;
+    stroke: red;
+    stroke-width: 2px;
+}
+body {
+    background-color: silver;
 }
