@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./style_file.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="./d3_code/tsla_rev_net_gross.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <title>Tesla Stock Health</title>
+</head>
+<body onload="main()">
+        <!-- <div class="logo"></div> -->
+        <img src="./imgs/tsla_logo.png" class="img-fluid" alt="Cinque Terre"width="150" height="150">
+        <div class="container">
+            <div class="jumbotron">
+                <h1>Tesla's Annual Statistics Over the Years</h1>
+                <h5>Annual Revenue, Annual Net Income, Annual Gross Profit</h5>
+                <p>
+                    Let's first take a look at the Annual Revenue by Year.
+                </p>
+                <h2>TSLA Annual Revenue by Year</h2>
+                <div id="scene3" style = "text-align: center;">
+                    <div id="graph3"></div>
+                </div>
+                <br>
+                <br>
+                <h5>Hover over the bars to activate the interaction, they will activate and show the revenue for that year</h5>
+                <br>
+                <p>
+                    Tesla was doing well, bringing in a 117 Million USD in revenue the year 2010. It steadily rose to about a 25 Billion dollar company
+                    in 2019, and then expontentially shifted to an 80 billion dollar company in 2022. Now, revenue is a great indicator of a company and
+                    its products validity, but not of how well the company is actually doing.
+                </p>
+                <h2>TSLA Annual Net Income by Year</h2>
+                <div id="scene4" style = "text-align: center;">
+                    <div id="graph4"></div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <h5>Hover over the bars to activate the interaction, they will activate and show the net income for that year</h5>
+                <br>
+                <br>
+                <h2>TSLA Annual Gross Profit by Year</h2>
+                <div id="scene5" style = "text-align: center;">
+                    <div id="graph5"></div>
+                </div>
+                <br>
+                <br>
+                <h5>Hover over the bars to activate the interaction, they will activate and show the gross profit for that year</h5>
+                <br>
+                <p>
+                    If we take a look above, we can see the Annual Net Income and Gross Profit by year for Tesla. The net income
+                    is the gross profit without the costs associated with production. As we can see, up until 2019, Tesla was not bringing
+                    in money. It is truly amazing that they were able to rise to such a high level even though they were not turning a net
+                    positive for so many years.
+                </p>
+            </div>
+        </div>
+
+
+        <button class="button button1" button onclick="window.location.href = 'tsla_sc2.html';" role="button">Previous</button>
+        <button class="button button1" button onclick="window.location.href = 'index.html';" role="button">Main Page</button> 
+</body>
+</html>

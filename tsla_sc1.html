@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./style_file.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="./d3_code/main_stockgraph.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Tesla Overall Stock Breakdown and History</title>
+</head>
+<body onload="main()">
+        <!-- <div class="logo"></div> -->
+        <img src="./imgs/tsla_logo.png" class="img-fluid" alt="Cinque Terre"width="150" height="150">
+
+        <div class="container">
+            <div class="jumbotron">
+                <h1>Tesla Overall Stock Breakdown and History</h1>
+                <p>
+                In 2008, the Tesla Roadster entered production. That was one of the key events that sparked interest in Tesla, <br>
+                and is why data available for its stock health and growth is available 2010 and onward. Musk took over as CEO <br>
+                in October of 2008. Under his leadership, in 2011 the Model S prototype was revealed. Its successful release <br>
+                in 2012, alongside Tesla's supercharger infrastructure being started in California, allowed for it to turn its <br>
+                first profits in 2013, which can be seen in its significant stock increase during that time period. 
+                <br>
+                <br>
+                <img src="./imgs/Supercharger-img-sc1.jpeg" class="img-fluid" alt="Cinque Terre">
+                <br>
+                <br>
+                Below we can see Teslas stock growth over its start in the early 2010's to the present day.</p>
+                <h2>TSLA Closing Stock 2010-2022</h2>
+                <div id="scene1">
+                    <div id="graph1"></div>
+                </div>
+                <br>
+                <h5>Hover over the chart to activate the interaction, the highlighted point is shown in steelblue and 
+                    the closing stock price price and month are shown underneath the graph.</h5>
+                <br>
+                <p>
+                Tesla diversified over the 2010s, getting involved in the solar market as well as producing at a mass consumer <br>
+                level with the Model 3. 
+                
+                
+                <br>
+                <br>
+                <img src="./imgs/2019_Tesla_Model_3_Performance_AWD_Front.jpeg" class="img-fluid" alt="Cinque Terre">
+                <br>
+                <br>
+                
+                In the next slides, we will discuss further Tesla's highly successful early 2020s.
+
+                </p>
+            </div>
+        </div>
+        <button class="button button1" button onclick="window.location.href = 'index.html';" role="button">Previous</button>
+        <button class="button button1" button onclick="window.location.href = 'tsla_sc2.html';" role="button">Next</button> 
+</body>
+</html>

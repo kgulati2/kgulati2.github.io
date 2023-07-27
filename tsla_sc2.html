@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./style_file.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="./d3_code/tsla_eps.js"></script>
+    <title>Tesla Earnings Per Share</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body onload="main()">
+        <!-- <div class="logo"></div> -->
+        <img src="./imgs/tsla_logo.png" class="img-fluid" alt="Cinque Terre"width="150" height="150">
+        <div class="container">
+            <div class="jumbotron">
+                <h1>Tesla Earnings Per Share (EPS)</h1>
+                <p>
+                    To get an idea of the success and health of Tesla's stocks, specifically in the early 2020s, we can use
+                    a known figure called the P/E Ratio. The P/E Ratio can tell us the growth likelihood of a stock depending on its value.
+                    Before that, lets first graph the Earnings Per Share (EPS) to get a better idea of Tesla's change from the 10s to the 20s.
+                </p>
+                <h2>TSLA Annual Earnings Per Share (EPS) & P/E Ratio</h2>
+                <div id="scene2">
+                    <div id="graph2"></div>
+                </div>
+                <br>
+                <br>
+                <h5>Hover over the bars to activate the interaction, they will activate and show the earnings per share for that year</h5>
+                <br>
+                <p>
+                    We can see that for all of the 10s, tesla did not earn a single dollar from its shares. Sure it was doing amazing work, but there
+                    simply wasn't a large enough market to really build on the concept & move to a high production status. Because of the Model S's
+                    popularity and Tesla's key choices to build vehicles that a larger consumer base could afford, Tesla started to turn a profit.
+                    Between 2021 and 2022 they more than doubled their EPS.
+                </p>
+                <table class="table table-dark">
+                    <thead>
+                      <tr>
+                        <th scope="col">Year</th>
+                        <th scope="col">Avg. Price Per Share (P)</th>
+                        <th scope="col">Earnings Per Share (E)</th>
+                        <th scope="col">P/E Ratio</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">2020</th>
+                        <td>$430</td>
+                        <td>$0.21</td>
+                        <td>2047.6</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2021</th>
+                        <td>$800</td>
+                        <td>$1.63</td>
+                        <td>490.8</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2022</th>
+                        <td>$1.0k</td>
+                        <td>$3.62</td>
+                        <td>276.2</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p>
+                    If we take a look at the table above, we can see the calculated P/E Ratio based on our graphed EPS and average Price Per Share for each year.
+                    The ratios are extremely high, with the average technology company having a P/E ratio of around 30. This signifies its high potential of growth
+                    as the larger the P/E the more likelihood of growth.
+                    <br>
+                    
+                    Now, lets take a look at some of the annual numbers at a high level.
+
+                </p>
+            </div>
+        </div>
+
+        
+        <button class="button button1" button onclick="window.location.href = 'tsla_sc1.html';" role="button">Previous</button>
+        <button class="button button1" button onclick="window.location.href = 'tsla_sc3.html';" role="button">Next</button> 
+</body>
+</html>
