@@ -1,6 +1,6 @@
 function main() {
 
-    var margin = {top: 20, right: 20, bottom: 30, left: 50},
+    var margin = {top: 15, right: 15, bottom: 20, left: 40},
     width = 1000 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
@@ -31,16 +31,20 @@ function main() {
         .style("border-radius", "3px")
         .style("padding", "15")
         .style("color", "white")
-        .style("width", "180px")
-        .style("height", "20px")
+        .style("width", "200px")
+        .style("height", "40px")
+
     
-    d3.csv("./data/TSLA.csv", function(d) { return { date: d.Date, Close: d.Close}}).then(function(data) {
+    d3.csv("./data/TSLA.csv", function(d) { return { date: d.Date, Close: d.Close, Open: d.Open, High: d.High, Low: d.Low}}).then(function(data) {
 
         var parseDate = d3.timeParse("%Y-%m-%d");
 
         data.forEach(function(d) {
             d.date = parseDate(d.date);
             d.Close = +d.Close;
+            d.Open = +d.Open;
+            d.High = +d.High;
+            d.Low = +d.Low;
         });
 
         xScale.domain(d3.extent(data, function(d) { return d.date; })).range([0, width]);
@@ -50,6 +54,20 @@ function main() {
                         .attr("width", width)
                         .attr("height", height)
                         .attr("fill", "white");
+        
+        svg.append("circle")
+                .attr("cx", 870)
+                .attr("cy", 230)
+                .attr("r", 40)
+                .attr("stroke", "black")
+                .attr("opacity", 0.5)
+                .attr("fill", "steelblue");
+        svg.append("text")
+                .attr("class", "x label")
+                .attr("text-anchor", "end")
+                .attr("x", 810)
+                .attr("y", 230)
+                .text("This crash is due to the COVID-19 Epidemic");
 
         svg.append("path")
             .data([data])
@@ -65,7 +83,8 @@ function main() {
 
         console.log(data)
         const formatDate = d3.timeFormat("%b-%Y");
-        const formatStock = d3.format("0.2s")
+        const formatStock = d3.format("0.3s")
+
         list_rect.data(data).on("mousemove", function(event, d) {
 
             const xPoint = d3.pointer(event, this)[0];
@@ -93,7 +112,10 @@ function main() {
                             .duration('50')
                             .style("opacity", 1);
                             console.log(d_loc.Close)
-                            let yearlog = "Date: " + formatDate(d_loc.date) + "\n" + "Stock: $ " + formatStock(d_loc.Close);
+
+                            let yearlog = "Date: " + formatDate(d_loc.date) + "\n" + "High: $ " + formatStock(d_loc.High)
+                            + " Low: $ " + formatStock(d_loc.Low) + " Open: $ " + formatStock(d_loc.Open) + " Close: $ " + formatStock(d_loc.Close);
+
                             tooltip.html(yearlog)
                             .style("left", (d.pageX) + "px")
                             .style("top", (d.pageY) + "px");

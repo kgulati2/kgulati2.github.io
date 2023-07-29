@@ -1,7 +1,7 @@
 function main() {
     console.log("eps connected")
 
-    var margin = {top: 20, right: 20, bottom: 30, left: 50},
+    var margin = {top: 15, right: 15, bottom: 20, left: 40},
     width = 1000 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
